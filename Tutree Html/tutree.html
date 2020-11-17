@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <script>
+        $(function () {
+
+            $("#rateYo").rateYo({
+
+                onSet: function (rating, rateYoInstance) {
+                    rating = Math.ceil(rating);
+                    $('#rating_input').val(rating);//setting up rating value to hidden field
+                    alert("Rating is set to: " + rating);
+                }
+            });
+        });
+    </script>
+    <style>
+        @import url(http://fonts.googleapis.com/css?family=Calibri:400,300,700);
+
+        body {
+            font-family: 'Calibri', sans-serif !important;
+            background-color: #D32F2F font-family: Arial;
+            margin: 0;
+            padding: 20px;
+            background-color: #f1f1f1;
+        }
+
+        .mb-10 {
+            margin-bottom: 10px
+        }
+
+        .mt-100 {
+            margin-top: 100px
+        }
+
+        .modal-content {
+            border-radius: 1px
+        }
+
+        .modal-header {
+            border-bottom: 1px solid #ffffff
+        }
+
+        .btn:focus {
+            box-shadow: 0 0 0 0.2rem rgb(255, 255, 255)
+        }
+
+        .close:focus {
+            box-shadow: 0 0 0 0.2rem rgb(255, 255, 255)
+        }
+
+        .btn.btn-out {
+            outline: 1px solid #fff;
+            outline-offset: -5px
+        }
+
+        .btn {
+            border-radius: 2px;
+            text-transform: capitalize;
+            font-size: 15px;
+            padding: 10px 19px;
+            cursor: pointer;
+            color: #fff
+        }
+
+        .form-control:focus {
+            box-shadow: 0 0 0 0.2rem rgb(255, 255, 255)
+        }
+
+        .form-control {
+            border-radius: 0px !important
+        }
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .left-column {
+            float: left;
+            width: 25%;
+        }
+
+        .right-column {
+            width: 75%;
+            float: right;
+            padding-left: 20px;
+        }
+
+        .card {
+            padding: 20px;
+            background-color: #ffffff;
+            margin-top: 20px;
+        }
+
+        .form-inline {
+            background-color: darkslategrey;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <img style="margin-top: 19px" class="logo-in"
+            src="https://www.careerbuilder.co.in/cdn/assets/logos/cb_logo_navy-f99fc96c6c71fe50ef2d1bb09f0788d4657b16c4718b5d12030413b7fff413ac.svg"
+            alt="Cb logo navy">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+    <form class="form-inline">
+        <h3 style="color: #f1f1f1;">Find Jobs</h3><br><br><br><br><br><br>
+        <label class="sr-only" for="inlineFormInputName2">Name</label>
+        <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Programmer">
+
+        <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
+        <div class="input-group mb-2 mr-sm-2">
+            <div class="input-group-prepend">
+                <div class="input-group-text">@</div>
+            </div>
+            <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Mumbai">
+        </div>
+
+
+
+        <button type="submit" class="btn btn-primary mb-2">Submit</button>
+    </form>
+    <div class="row">
+        <div class="left-column">
+            <div class="card">
+                <div class="form-check">
+                    <h4>Date Posted</h4>
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                        value="option1" checked>
+                    <label class="form-check-label" for="exampleRadios1">
+                        30 days
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                        value="option2">
+                    <label class="form-check-label" for="exampleRadios2">
+                        4 days
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3"
+                        value="option3" disabled>
+                    <label class="form-check-label" for="exampleRadios3">
+                        50 days
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3"
+                        value="option3" disabled>
+                    <label class="form-check-label" for="exampleRadios3">
+                        24 days
+                    </label>
+                </div>
+            </div>
+            <div class="card">
+                <div class="form-check">
+                    <h4>Job Type</h4>
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                        Full Time
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
+                    <label class="form-check-label" for="defaultCheck2">
+                        Internship
+                    </label>
+                </div>
+            </div>
+            <div class="card">
+                <div class="form-check">
+                    <h4>Categories</h4>
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                        Information technology
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
+                    <label class="form-check-label" for="defaultCheck2">
+                        Others
+                    </label>
+                </div>
+            </div>
+            <div class="card">
+                <div class="form-check">
+                    <h4>States</h4>
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                        value="option1" checked>
+                    <label class="form-check-label" for="exampleRadios1">
+                        Default radio
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                        value="option2">
+                    <label class="form-check-label" for="exampleRadios2">
+                        Second default radio
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3"
+                        value="option3" disabled>
+                    <label class="form-check-label" for="exampleRadios3">
+                        Disabled radio
+                    </label>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="right-column">
+            <div class="card">
+                <h3 style="color: darkturquoise;">Software Developer</h3>
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-alarm" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M6.5 0a.5.5 0 0 0 0 1H7v1.07a7.001 7.001 0 0 0-3.273 12.474l-.602.602a.5.5 0 0 0 .707.708l.746-.746A6.97 6.97 0 0 0 8 16a6.97 6.97 0 0 0 3.422-.892l.746.746a.5.5 0 0 0 .707-.708l-.601-.602A7.001 7.001 0 0 0 9 2.07V1h.5a.5.5 0 0 0 0-1h-3zm1.038 3.018a6.093 6.093 0 0 1 .924 0 6 6 0 1 1-.924 0zM8.5 5.5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9V5.5zM0 3.5c0 .753.333 1.429.86 1.887A8.035 8.035 0 0 1 4.387 1.86 2.5 2.5 0 0 0 0 3.5zM13.5 1c-.753 0-1.429.333-1.887.86a8.035 8.035 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1z" />
+                </svg>Posted 3 days ago
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-card-list" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M14.5 3h-13a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
+                    <path fill-rule="evenodd"
+                        d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5z" />
+                    <circle cx="3.5" cy="5.5" r=".5" />
+                    <circle cx="3.5" cy="8" r=".5" />
+                    <circle cx="3.5" cy="10.5" r=".5" />
+                </svg>GST Global
+
+                <p>'?????? Performs coding; testing and all related documentation for a project
+                    ?????? Performs detailed design and Implements the detailed design for the component in a standard
+                    and efficient way
+                    ?????? Unit tests the components developed and reviews other??????s implementation
+                    ?????? Integrates the component into the overall system and supports integration testing
+                    ?????? Supports the verification and validation team by resolving the issues / defects in a timely
+                    manner
+                </p>
+            </div>
+            <div class="card">
+                <h3 style="color: darkturquoise;">Software Developer</h3>
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-alarm" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M6.5 0a.5.5 0 0 0 0 1H7v1.07a7.001 7.001 0 0 0-3.273 12.474l-.602.602a.5.5 0 0 0 .707.708l.746-.746A6.97 6.97 0 0 0 8 16a6.97 6.97 0 0 0 3.422-.892l.746.746a.5.5 0 0 0 .707-.708l-.601-.602A7.001 7.001 0 0 0 9 2.07V1h.5a.5.5 0 0 0 0-1h-3zm1.038 3.018a6.093 6.093 0 0 1 .924 0 6 6 0 1 1-.924 0zM8.5 5.5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9V5.5zM0 3.5c0 .753.333 1.429.86 1.887A8.035 8.035 0 0 1 4.387 1.86 2.5 2.5 0 0 0 0 3.5zM13.5 1c-.753 0-1.429.333-1.887.86a8.035 8.035 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1z" />
+                </svg>Posted 3 days ago
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-card-list" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M14.5 3h-13a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
+                    <path fill-rule="evenodd"
+                        d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5z" />
+                    <circle cx="3.5" cy="5.5" r=".5" />
+                    <circle cx="3.5" cy="8" r=".5" />
+                    <circle cx="3.5" cy="10.5" r=".5" />
+                </svg>GST Global
+
+                <p>'?????? Performs coding; testing and all related documentation for a project
+                    ?????? Performs detailed design and Implements the detailed design for the component in a standard
+                    and efficient way
+                    ?????? Unit tests the components developed and reviews other??????s implementation
+                    ?????? Integrates the component into the overall system and supports integration testing
+                    ?????? Supports the verification and validation team by resolving the issues / defects in a timely
+                    manner
+                </p>
+            </div>
+            <div class="card">
+                <h3 style="color: darkturquoise;">Software Developer</h3>
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-alarm" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M6.5 0a.5.5 0 0 0 0 1H7v1.07a7.001 7.001 0 0 0-3.273 12.474l-.602.602a.5.5 0 0 0 .707.708l.746-.746A6.97 6.97 0 0 0 8 16a6.97 6.97 0 0 0 3.422-.892l.746.746a.5.5 0 0 0 .707-.708l-.601-.602A7.001 7.001 0 0 0 9 2.07V1h.5a.5.5 0 0 0 0-1h-3zm1.038 3.018a6.093 6.093 0 0 1 .924 0 6 6 0 1 1-.924 0zM8.5 5.5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9V5.5zM0 3.5c0 .753.333 1.429.86 1.887A8.035 8.035 0 0 1 4.387 1.86 2.5 2.5 0 0 0 0 3.5zM13.5 1c-.753 0-1.429.333-1.887.86a8.035 8.035 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1z" />
+                </svg>Posted 3 days ago
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-card-list" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M14.5 3h-13a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
+                    <path fill-rule="evenodd"
+                        d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5z" />
+                    <circle cx="3.5" cy="5.5" r=".5" />
+                    <circle cx="3.5" cy="8" r=".5" />
+                    <circle cx="3.5" cy="10.5" r=".5" />
+                </svg>GST Global
+
+                <p>'?????? Performs coding; testing and all related documentation for a project
+                    ?????? Performs detailed design and Implements the detailed design for the component in a standard
+                    and efficient way
+                    ?????? Unit tests the components developed and reviews other??????s implementation
+                    ?????? Integrates the component into the overall system and supports integration testing
+                    ?????? Supports the verification and validation team by resolving the issues / defects in a timely
+                    manner
+                </p>
+            </div>
+        </div>
+    </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.js"></script>
+    <div class="container d-flex justify-content-center mt-100">
+        <div class="row">
+            <div class="col-md-6"> <button type="button" class="btn btn-info btn-lg" data-toggle="modal"
+                    data-target="#myModal">Review Our Product</button> </div>
+        </div>
+    </div>
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Rate this product</h4> <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div id="message" style="text-align: center; color: green;"></div> <input type="text"
+                        class="form-control mb-10" size="10" id="capacity_txt_modal" placeholder="your name" />
+                    <textarea type="text" class="form-control mb-10"
+                        placeholder="What would you like to say about this product"></textarea>
+                    <div style="display:inline-block;" id="rateYo"></div>
+                    <input type="hidden" name="rating" id="rating_input" />
+                </div>
+                <br />
+                <div class="modal-footer">
+                    <button class="btn btn-out btn-primary btn-square">Save Review</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
